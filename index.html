@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Board Game</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <nav>
+          <svg class="icon" id="dice-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M88.89,0H11.11A11.14,11.14,0,0,0,0,11.11V88.89A11.14,11.14,0,0,0,11.11,100H88.89A11.14,11.14,0,0,0,100,88.89V11.11A11.14,11.14,0,0,0,88.89,0ZM25,83.33A8.33,8.33,0,1,1,33.33,75,8.32,8.32,0,0,1,25,83.33Zm0-50A8.33,8.33,0,1,1,33.33,25,8.32,8.32,0,0,1,25,33.33Zm25,25A8.33,8.33,0,1,1,58.33,50,8.32,8.32,0,0,1,50,58.33Zm25,25A8.33,8.33,0,1,1,83.33,75,8.32,8.32,0,0,1,75,83.33Zm0-50A8.33,8.33,0,1,1,83.33,25,8.32,8.32,0,0,1,75,33.33Z"/>
+          </svg>
+          <div class="dropdown">
+            <svg class="icon" id="players-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path d="M50,50A25,25,0,1,0,25,25,25,25,0,0,0,50,50Zm0,12.5c-16.69,0-50,8.38-50,25V100H100V87.5C100,70.88,66.69,62.5,50,62.5Z"/>
+            </svg>
+            <div class="dropdown-content">
+              <div id="add-players">
+                <div class="player-btn disabled-btn" id="delete-btn">
+                  <svg id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:16.67px;}</style></defs><line class="cls-1" x1="20" y1="50" x2="80" y2="50"/></svg>
+                </div>
+                <div class="player-btn add-player" id="add-btn">
+                  <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:16.67px;}</style></defs><line class="cls-1" x1="20" y1="50" x2="80" y2="50"/><line class="cls-1" x1="50" y1="80" x2="50" y2="20"/></svg>
+                </div>
+              </div>
+              <div id="players"></div>
+            </div>
+          </div>
+        </nav>
+        <canvas id="canvas">
+          Canvas is not supported by your browser
+        </canvas>
+        <img id="board" src="images/board.jpg" />
+      </div>
+    </div>
+    <div id="dice">
+      <p id="instructions">Say "stop" to pick a number:</p>
+      <div id="number">1</div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

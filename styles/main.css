@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin_Sans";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+#box {
+  display: flex;
+  margin: 0 auto;
+}
+
+nav {
+  margin: 0 2vh;
+  display: flex;
+  flex-flow: column;
+  z-index: 2;
+}
+
+.icon {
+  margin: 2vh 1vh 0 1vh;
+  width: 8vh;
+  height: 8vh;
+  opacity: 50%;
+  transition: opacity .2s;
+}
+
+.icon:hover {
+  opacity: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+#add-players {
+  display: flex;
+}
+
+.player-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4vh;
+  height: 4vh;
+  opacity: 50%;
+  color: white;
+  border-radius: 1vh 1vh;
+  margin: .5vh;
+  transition: opacity .2s;
+}
+
+.delete-player {
+  font-weight: bold;
+  background-color: red;
+}
+
+.add-player {
+  font-weight: bold;
+  background-color: green;
+}
+
+.delete-player:hover {
+  background-color: red;
+  opacity: 90%;
+}
+
+.add-player:hover {
+  background-color: green;
+  opacity: 90%;
+}
+
+.disabled-btn {
+  background-color: gray;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+#board {
+  height: 95vh;
+  border: solid black .5vh;
+  user-select: none;
+}
+
+#canvas {
+  margin: auto;
+  position: fixed;
+}
+
+#dice {
+  opacity: 0;
+  width: 50vmin;
+  height: 50vmin;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  text-align: center;
+  border-radius: 5%;
+  border: 4px solid rgba(0, 0, 0, .7);
+  transition-property: opacity, transform, background-color;
+  transition-duration: .3s, .4s, .6s;
+  user-select: none;
+  overflow: hidden;
+}
+
+#instructions {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  background: rgba(0, 0, 0, .7);
+  color: white;
+  font: bold 3vmin Roboto, "sans serif";
+  user-select: none;
+}
+
+#number {
+  color:  rgba(255, 255, 255, .9);
+  font: bold 40vmin "Josefin_Sans";
+  margin-top: 3.5vmin;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+  filter: drop-shadow(.5vmin .5vmin .5vmin #000);
+  user-select: none;
+}
