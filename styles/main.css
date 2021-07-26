@@ -135,6 +135,7 @@ nav {
   transition-duration: .3s, .4s, .6s;
   user-select: none;
   overflow: hidden;
+  z-index: 3;
 }
 
 #instructions {
