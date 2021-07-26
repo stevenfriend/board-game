@@ -111,11 +111,13 @@ nav {
   height: 95vh;
   border: solid black .5vh;
   user-select: none;
+  z-index: 1;
 }
 
 #canvas {
   margin: auto;
   position: fixed;
+  z-index: 2;
 }
 
 #dice {
