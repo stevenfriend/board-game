@@ -2,6 +2,7 @@
 
 const board = document.getElementById('board');
 const canvas = document.getElementById('canvas');
+const gameSelect = document.getElementById('game-select');
 const deletebutton = document.getElementById('delete-btn');
 const addbutton = document.getElementById('add-btn');
 const dicebutton = document.getElementById('dice-btn');
@@ -23,6 +24,18 @@ const colors = [
 const counters = [];
 let state = 'idle';
 let color = random(1, 7);
+
+gameSelect.addEventListener('change', e => {
+  getBoardGame(e.target.value);
+  setTimeout(() => {
+    resizeCounters();
+    resizeCanvas();
+  }, 1000)
+});
+
+function getBoardGame(value) {
+  board.src = `images/${value}.jpg`;
+}
 
 window.addEventListener('resize', () => {
   resizeCounters();
