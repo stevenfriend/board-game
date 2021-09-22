@@ -57,8 +57,11 @@ canvas.addEventListener('mousedown', () => {
 canvas.addEventListener('mouseup', () => {
   mouse.down = false;
 });
-resizeCanvas();
-main();
+
+window.addEventListener('load', (event) => {
+  resizeCanvas();
+  main();
+});
 
 function main() {
   update();
