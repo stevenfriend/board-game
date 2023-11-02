@@ -182,7 +182,7 @@ function checkTime(now) {
 }
 
 function reroll() {
-  const roll = random(1, 6);
+  const roll = random(2, 12);
   if (number.innerHTML == roll) reroll();
   else number.innerHTML = roll;
 }
