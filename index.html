@@ -11,9 +11,9 @@
         <nav>
           <select name="board-game" id="game-select">
             <optgroup label="Week 6~9">
-              <option value="school-pictures">School Supplies (Pictures)</option>
+              <option selected="selected" value="school-pictures">School Supplies (Pictures)</option>
               <option value="school-words">School Supplies (Words)</option> 
-              <option selected="selected" value="career-path">Career Path Board Game</option>
+              <option value="career-path">Career Path Board Game</option>
             </optgroup>
             
             <optgroup label="Honeycomb Board Games">
@@ -67,6 +67,12 @@
           <svg class="icon" id="dice-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path d="M88.89,0H11.11A11.14,11.14,0,0,0,0,11.11V88.89A11.14,11.14,0,0,0,11.11,100H88.89A11.14,11.14,0,0,0,100,88.89V11.11A11.14,11.14,0,0,0,88.89,0ZM25,83.33A8.33,8.33,0,1,1,33.33,75,8.32,8.32,0,0,1,25,83.33Zm0-50A8.33,8.33,0,1,1,33.33,25,8.32,8.32,0,0,1,25,33.33Zm25,25A8.33,8.33,0,1,1,58.33,50,8.32,8.32,0,0,1,50,58.33Zm25,25A8.33,8.33,0,1,1,83.33,75,8.32,8.32,0,0,1,75,83.33Zm0-50A8.33,8.33,0,1,1,83.33,25,8.32,8.32,0,0,1,75,33.33Z"/>
           </svg>
+          <div>
+            <label class="dice-label" for="min">min:</label>
+            <input class="dice-input" type="number" id="min" name="min" value="1">
+            <label class="dice-label" for="max">max:</label>
+            <input class="dice-input" type="number" id="max" name="max" value="6">
+          </div>
           <div class="dropdown">
             <svg class="icon" id="players-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <path d="M50,50A25,25,0,1,0,25,25,25,25,0,0,0,50,50Zm0,12.5c-16.69,0-50,8.38-50,25V100H100V87.5C100,70.88,66.69,62.5,50,62.5Z"/>
@@ -84,7 +90,7 @@
             </div>
           </div>
         </nav>
-        <img id="board" src="images/career-path.jpg" />
+        <img id="board" src="images/school-pictures.jpg" />
       </div>
       <canvas id="canvas">
         Canvas is not supported by your browser

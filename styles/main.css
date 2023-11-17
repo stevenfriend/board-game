@@ -43,6 +43,19 @@ nav {
   transition: opacity .2s;
 }
 
+.dice-label {
+  font-family: "Roboto";
+  font-size: calc(10px + 1vmin);
+}
+
+.dice-input {
+  font-family: "Roboto";
+  font-size: calc(10px + 1vmin);
+  margin: 5px;
+  padding: 5px;
+  width: 60px;
+}
+
 .icon:hover {
   opacity: 100%;
 }

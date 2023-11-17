@@ -8,6 +8,7 @@ const addbutton = document.getElementById('add-btn');
 const dicebutton = document.getElementById('dice-btn');
 const dice = document.getElementById('dice');
 const number = document.getElementById('number');
+const min = document.getElementById('min');
 const time = { roll: 0, background: 0 };
 const mouse = { down: false };
 const maxPlayers = 8;
@@ -182,7 +183,7 @@ function checkTime(now) {
 }
 
 function reroll() {
-  const roll = random(2, 12);
+  const roll = random(parseInt(min.value), parseInt(max.value));
   if (number.innerHTML == roll) reroll();
   else number.innerHTML = roll;
 }
