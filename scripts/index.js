@@ -35,7 +35,7 @@ gameSelect.addEventListener('change', e => {
 });
 
 function getBoardGame(value) {
-  board.src = `images/${value}.jpg`;
+  board.src = `images/${value}`;
 }
 
 window.addEventListener('resize', () => {
